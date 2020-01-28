@@ -1,9 +1,6 @@
 ---
 templateKey: about-page
 title: O nas
-mapZoom: 10
-mapLat: 5
-mapLng: 5
 ---
 Studio projektowania architektury wnętrz i wykonywania  hiperrealistycznych wizualizacji.
 

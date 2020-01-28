@@ -23,6 +23,22 @@ h1,h2 {
   font-family: $font-serif;
 }
 
+.vertical-title {
+  font-size: 6rem;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+  left: 0;
+  bottom: 6rem;
+  h1 {
+    position: absolute;
+    right: 0;
+    width: 0;
+    transform: rotate(-90deg);
+    line-height: 4rem;
+  }
+}
+
 .content {
   h2 {
     font-weight: normal;
@@ -53,6 +69,15 @@ h1,h2 {
   }
 }
 
+.section {
+  &:first-of-type {
+    padding-top: 0;
+  }
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}
 
 @import "navbar";
 @import "home";
+@import "contact";
