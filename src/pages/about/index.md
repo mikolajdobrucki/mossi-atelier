@@ -19,7 +19,7 @@ Mossi powstało w Krakowie w 2018 roku z pasji do projektowania.
 * Kreatywność
 * Kontaktowość
 
-### Jak pracujemy?
+## Jak pracujemy?
 1. Dialog
 1. Inwentaryzacja
 1. Koncepcja
