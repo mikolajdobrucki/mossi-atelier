@@ -4,22 +4,32 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ content, contentComponent }) => {
+export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-8 is-offset-1">
-            <div className="section">
-              <ol></ol>
-              <PageContent className="content" content={content} />
-            </div>
+    <div className="about">
+      <div className="vertical-title">
+        <div className="section">
+          <div className="container">
+            <h1>{title}</h1>
           </div>
         </div>
       </div>
-    </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-8 is-offset-1">
+              <div className="section">
+                <ol></ol>
+                <PageContent className="content" content={content} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
 
