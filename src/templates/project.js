@@ -37,9 +37,16 @@ export const BlogPostTemplate = ({
     <section className="section">
       {helmet || ''}
       <div className="project">
+        <div className="vertical-title">
+          <div className="section">
+            <div className="container">
+              <h1>Projekty</h1>
+            </div>
+          </div>
+        </div>
         <div className="container">
           <div className="columns">
-            <div className="column is-10">
+            <div className="projects-content column is-11">
               <div className={`project-layout ${layout}`}>
                 <div className="project-featuredimage">
                   <PreviewCompatibleImage
@@ -84,6 +91,10 @@ export const BlogPostTemplate = ({
               <div className="project-navigation-bottom">
                 <ProjectsNav previous={previousProjectLink} next={nextProjectLink}/>
               </div>
+            </div>
+            <div className="project-buttons column is-1">
+              <Link className="project-button project-button-back" to="/projects">x</Link>
+              <Link className="project-button project-button-up" to="/">up</Link>
             </div>
           </div>
         </div>

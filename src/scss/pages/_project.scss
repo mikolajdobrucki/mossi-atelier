@@ -1,3 +1,7 @@
+.projects-content {
+  margin-left: -16.66%;
+}
+
 .project-layout {
   display: grid;
   gap: 2rem;
@@ -29,4 +33,24 @@
 
 .project-navigation-top {
   padding-left: 4rem;
+}
+
+.project-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-button {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  display: block;
+  border: 1px solid $black;
+}
+
+.project-button-up {
+  margin-bottom: 3.5rem;
 }
