@@ -1,4 +1,6 @@
 .contact {
+  font-family: $font-serif;
+
   .content {
     margin-top: 6rem;
     font-size: 1.76rem;
@@ -7,4 +9,16 @@
 }
 .contact-map {
   margin-left: -33.3%;
+  margin-bottom: 0;
+}
+.contact-socials {
+  margin-top: 4rem;
+  font-size: 1.38rem;
+  a {
+    display: inline-block;
+    padding: 0.5rem;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
 }

@@ -35,6 +35,10 @@
   padding-left: 4rem;
 }
 
+.project-navigation-bottom {
+  padding: 3rem 0.75rem;
+}
+
 .project-buttons {
   display: flex;
   flex-direction: column;
@@ -51,6 +55,9 @@
   border: 1px solid $black;
 }
 
-.project-button-up {
-  margin-bottom: 3.5rem;
+.layout-1-2-1-2 .project-photo:nth-child(5),
+.layout-1-2-1-1 .project-photo:nth-child(5 + n),
+.layout-1-2-2-2 .project-photo:nth-child(3 + n)
+{
+  grid-column: 1 / span 2;
 }

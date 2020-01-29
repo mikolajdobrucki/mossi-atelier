@@ -21,7 +21,7 @@ export const ContactPageTemplate = ({ title, mapZoom, mapLng, mapLat, content, c
       <section className="section">
         <div className="container">
           <div className="columns">
-            <div className="contact-map column is-8" style={{ paddingBottom: 0 }}>
+            <div className="contact-map column is-8">
               <div style={{ minHeight: "calc(100vh - 229px)", height: "100%", width: "100%" }}>
                 <GoogleMap
                   center={{
@@ -38,6 +38,13 @@ export const ContactPageTemplate = ({ title, mapZoom, mapLng, mapLat, content, c
             </div>
             <div className="column is-10 is-offset-1">
               <PageContent className="content" content={content} />
+              <div className="contact-socials">
+                <a href="http://www.instagram.com/mossi.atelier/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                / 
+                <a href="http://facebook.com/mossi.atelier" target="_blank" rel="noopener noreferrer">Facebook</a>
+                / 
+                <a href="https://pinterest.com/mossiatelier/" target="_blank" rel="noopener noreferrer">Pinterest</a>
+              </div>
             </div>
           </div>
         </div>

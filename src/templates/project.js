@@ -47,6 +47,7 @@ export const BlogPostTemplate = ({
         <div className="container">
           <div className="columns">
             <div className="projects-content column is-11">
+              <div className="layout-1-2-1-2 layout-1-2-2-2 layout-1-2-1-2 layout-1-2-1-1 layout-1-1-1-1"></div>
               <div className={`project-layout ${layout}`}>
                 <div className="project-featuredimage">
                   <PreviewCompatibleImage
@@ -88,13 +89,15 @@ export const BlogPostTemplate = ({
                 }
               </div>
               
-              <div className="project-navigation-bottom">
-                <ProjectsNav previous={previousProjectLink} next={nextProjectLink}/>
-              </div>
             </div>
             <div className="project-buttons column is-1">
               <Link className="project-button project-button-back" to="/projects">x</Link>
-              <Link className="project-button project-button-up" to="/">up</Link>
+              <a className="project-button project-button-up" href="#navbar">up</a>
+            </div>
+          </div>
+          <div className="columns">
+            <div className="project-navigation-bottom column is-9">
+              <ProjectsNav previous={previousProjectLink} next={nextProjectLink}/>
             </div>
           </div>
         </div>
@@ -195,6 +198,41 @@ export const pageQuery = graphql`
             }
           }
           image_3 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image_4 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image_5 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image_6 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image_7 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image_8 {
             childImageSharp {
               fluid(maxWidth: 800, quality: 90) {
                 ...GatsbyImageSharpFluid
