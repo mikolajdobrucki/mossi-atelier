@@ -9,13 +9,14 @@
   align-items: flex-end;
 }
 
-.navbar-item {
+a.navbar-item {
+  color: $black;
   img {
     height: 40px;
     max-height: 40px;
   }
-  a {
-    color: $black;
+  &:hover {
+    color: $grey;
   }
 }
 

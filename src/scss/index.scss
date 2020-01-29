@@ -22,12 +22,20 @@ h1,h2 {
   font-family: $font-serif;
 }
 
+a {
+  transition: 1s color;
+  &:hover {
+    color: $grey; 
+  }
+}
+
 @import "components/navbar";
 @import "components/content";
 @import "components/vertical-title";
 @import "components/section";
 
 @import "pages/home";
+@import "pages/about";
 @import "pages/contact";
 @import "pages/projects";
 @import "pages/project";
