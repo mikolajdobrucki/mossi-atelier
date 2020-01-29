@@ -10,7 +10,6 @@
 $font-serif: Mazius, serif;
 $font-sans-serif: "Open Sans", sans-serif;
 
-
 body {
   background: $white;
   color: $black;
@@ -23,62 +22,12 @@ h1,h2 {
   font-family: $font-serif;
 }
 
-.vertical-title {
-  font-size: 6rem;
-  position: fixed;
-  width: 100%;
-  z-index: 0;
-  left: 0;
-  bottom: 6rem;
-  h1 {
-    position: absolute;
-    right: 0;
-    width: 0;
-    transform: rotate(-90deg);
-    line-height: 4rem;
-  }
-}
+@import "components/navbar";
+@import "components/content";
+@import "components/vertical-title";
+@import "components/section";
 
-.content {
-  h2 {
-    font-weight: normal;
-    font-size: 4rem;
-  }
-  li + li{
-    margin-top: 0;
-  }
-  ul li {
-    padding-left: 2em;
-  }
-  ol {
-    list-style: none;
-    counter-reset: ol-counter;
-    margin-left: 0;
-  }
-  ol li {
-    counter-increment: ol-counter;
-  }
-  ol li::before {
-    content: counter(ol-counter) "/ ";
-    font-family: $font-serif;
-    font-size: 1rem;
-    margin-right: 2em;
-  }
-  ol:not([type]) {
-    list-style-type: none;
-  }
-}
-
-.section {
-  &:first-of-type {
-    padding-top: 0;
-  }
-  &:last-of-type {
-    padding-bottom: 0;
-  }
-}
-
-@import "navbar";
-@import "home";
-@import "contact";
-@import "projects";
+@import "pages/home";
+@import "pages/contact";
+@import "pages/projects";
+@import "pages/project";

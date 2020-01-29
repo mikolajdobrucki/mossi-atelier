@@ -1,0 +1,36 @@
+.project {
+
+}
+
+.project-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.project-title {
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+.project-description {
+  padding: 4rem 0 4rem 4rem;
+}
+
+.project-navigation {
+  display: flex;
+  font-family: $font-serif;
+  font-size: 2rem;
+}
+
+.project-navigation-previous {
+  margin-right: auto;
+}
+
+.project-navigation-next {
+  margin-left: auto;
+}
+
+.project-navigation-top {
+  padding-left: 4rem;
+}

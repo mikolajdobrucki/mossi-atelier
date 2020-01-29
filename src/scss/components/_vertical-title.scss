@@ -1,0 +1,17 @@
+.vertical-title {
+  font-size: 6rem;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+  left: 0;
+  bottom: 8rem;
+  h1 {
+    position: absolute;
+    right: 0;
+    width: 0;
+    transform: rotate(-90deg);
+    transform-origin: right bottom;
+    line-height: 4rem;
+    white-space: nowrap;
+  }
+}

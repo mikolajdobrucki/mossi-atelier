@@ -1,41 +1,90 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+
+export const ProjectsNav = ({
+  previous,
+  next
+}) => {
+  return (
+    <div className="project-navigation">
+      {previous && (
+        <Link className="project-navigation-previous" to={previous.fields.slug}>/{previous.frontmatter.title}</Link>
+      )}
+
+      {next && (
+<Link className="project-navigation-next" to={next.fields.slug}>/{next.frontmatter.title}</Link>
+      )}
+    </div>
+  )
+}
 
 export const BlogPostTemplate = ({
-  content,
-  contentComponent,
   description,
+  layout,
   title,
+  featuredimage,
+  images,
   helmet,
   nextProjectLink,
   previousProjectLink
 }) => {
-  const PostContent = contentComponent || Content
 
   return (
     <section className="section">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            
-            {previousProjectLink && (
-              <Link to={previousProjectLink.fields.slug}> ← previous </Link>
-            )}
+      <div className="project">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-10">
+              <div className={`project-layout ${layout}`}>
+                <div className="project-featuredimage">
+                  <PreviewCompatibleImage
+                    imageInfo={{
+                      image: featuredimage,
+                      alt: `Image of project ${title}`
+                    }}
+                  />
+                </div>
+                
 
-            {nextProjectLink && (
-              <Link to={nextProjectLink.fields.slug}> → next </Link>
-            )}
+              <div className="project-content">
+                <h1 className="project-title">
+                  /{title}
+                </h1>
+                
+                <p className="project-description">
+                  {description}
+                </p>
+
+                <div className="project-navigation-top">
+                  <ProjectsNav previous={previousProjectLink} next={nextProjectLink}/>
+                </div>
+              </div>
+
+                {
+                  Object.keys(images).map(function(key, index) {
+                    return (
+                      <div className="project-photo">
+                        <PreviewCompatibleImage
+                          imageInfo={{
+                            image: images[key],
+                            alt: `Image of project ${title}`
+                          }}
+                        />
+                      </div>
+                    )
+                  })
+                }
+              </div>
+              
+              <div className="project-navigation-bottom">
+                <ProjectsNav previous={previousProjectLink} next={nextProjectLink}/>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -44,10 +93,11 @@ export const BlogPostTemplate = ({
 }
 
 BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
   description: PropTypes.string,
+  layout: PropTypes.string,
   title: PropTypes.string,
+  images: PropTypes.object,
+  featuredimage: PropTypes.object,
   helmet: PropTypes.object,
 }
 
@@ -66,9 +116,10 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
+        layout={post.frontmatter.layout}
+        featuredimage={post.frontmatter.featuredimage}
         description={post.frontmatter.description}
+        images={post.frontmatter.images}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -81,14 +132,7 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         nextProjectLink={nextProjectLink}
         previousProjectLink={previousProjectLink}
-        nextProjectLink={nextProjectLink}
       />
-      {post.fields.slug}
-      {posts.map(({ node: post }) => (
-            <div key={post.id}>
-              dupa
-            </div>
-          ))}
     </Layout>
   )
 }
@@ -116,6 +160,37 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        layout
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 800, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        images {
+          image_1 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image_2 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image_3 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
     allMarkdownRemark(
@@ -127,10 +202,16 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          frontmatter {
+            title
+          }
         }
         next {
           fields {
             slug
+          }
+          frontmatter {
+            title
           }
         }
         node {
