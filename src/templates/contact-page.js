@@ -21,7 +21,7 @@ export const ContactPageTemplate = ({ title, mapZoom, mapLng, mapLat, content, c
       <section className="section">
         <div className="container">
           <div className="columns">
-            <div className="column is-4" style={{ paddingBottom: 0 }}>
+            <div className="contact-map column is-8" style={{ paddingBottom: 0 }}>
               <div style={{ minHeight: "calc(100vh - 229px)", height: "100%", width: "100%" }}>
                 <GoogleMap
                   center={{
