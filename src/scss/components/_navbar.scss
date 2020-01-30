@@ -1,3 +1,10 @@
+:root {
+  --navbar-height: 108px;
+  @media (min-width: $tablet) {
+    --navbar-height: 229px;
+  }
+}
+
 .navbar {
   padding-bottom: 40px;
   @media (min-width: $tablet) {

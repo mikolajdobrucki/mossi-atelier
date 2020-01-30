@@ -1,8 +1,5 @@
 .home {
-  height: calc(100vh - 108px);
-  @media (min-width: $tablet) {
-    height: calc(100vh - 229px);
-  }
+  height: calc(100vh - var(--navbar-height));
 }
 
 .home-img {

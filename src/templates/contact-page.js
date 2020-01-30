@@ -22,7 +22,7 @@ export const ContactPageTemplate = ({ title, mapZoom, mapLng, mapLat, content, c
         <div className="container">
           <div className="columns">
             <div className="contact-map column is-8">
-              <div style={{ minHeight: "calc(100vh - 229px)", height: "100%", width: "100%" }}>
+              <div className="contact-map-content">
                 <GoogleMap
                   center={{
                     lat: mapLat,
