@@ -7,6 +7,13 @@ export const IndexPageTemplate = ({
   image
 }) => (
   <main className="home">
+    <div className="vertical-title vertical-title-white">
+      <div className="section">
+        <div className="container">
+          <h1>Mossi Atelier</h1>
+        </div>
+      </div>
+    </div>
     <img src={
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         } className="home-img" />
