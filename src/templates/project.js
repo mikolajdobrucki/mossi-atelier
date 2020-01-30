@@ -60,7 +60,7 @@ export const BlogPostTemplate = ({
                 {
                   Object.keys(images).map(function(key, index) {
                     return (
-                      <div className="project-photo">
+                      <div className="project-photo" key={index}>
                         <PreviewCompatibleImage
                           imageInfo={{
                             image: images[key],
