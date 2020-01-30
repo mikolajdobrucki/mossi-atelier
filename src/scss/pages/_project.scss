@@ -1,11 +1,31 @@
+.project {
+  .vertical-title {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
 .projects-content {
-  margin-left: -16.66%;
+  @media (min-width: $tablet) {
+    margin-left: -16.66%;
+  }
+}
+
+.project-content {
+  @media (max-width: $tablet) {
+    grid-row-start: 1;
+  }
 }
 
 .project-layout {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .project-title {
@@ -15,6 +35,10 @@
 
 .project-description {
   padding: 4rem 0 4rem 4rem;
+
+  @media (max-width: $tablet) {
+    padding-left: 0;
+  }
 }
 
 .project-navigation {
@@ -33,6 +57,9 @@
 
 .project-navigation-top {
   padding-left: 4rem;
+  @media (max-width: $tablet) {
+    padding-left: 0;
+  }
 }
 
 .project-navigation-bottom {
@@ -53,6 +80,20 @@
   border-radius: 50%;
   display: block;
   border: 1px solid $black;
+}
+
+.project-button-back {
+  @media (max-width: $tablet) {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+  }
+}
+
+.project-button-up {
+  @media (max-width: $tablet) {
+    margin-left: auto;
+  }
 }
 
 .layout-1-2-1-2 .project-photo:nth-child(5),

@@ -18,7 +18,7 @@ export const BlogPostTemplate = ({
 }) => {
 
   return (
-    <section className="section">
+    <div>
       {helmet || ''}
       <div className="project">
         <div className="vertical-title">
@@ -28,65 +28,67 @@ export const BlogPostTemplate = ({
             </div>
           </div>
         </div>
-        <div className="container">
-          <div className="columns">
-            <div className="projects-content column is-11">
-              <div className="layout-1-2-1-2 layout-1-2-2-2 layout-1-2-1-2 layout-1-2-1-1 layout-1-1-1-1"></div>
-              <div className={`project-layout ${layout}`}>
-                <div className="project-featuredimage">
-                  <PreviewCompatibleImage
-                    imageInfo={{
-                      image: featuredimage,
-                      alt: `Image of project ${title}`
-                    }}
-                  />
+        <section className="section">
+          <div className="container">
+            <div className="columns">
+              <div className="projects-content column is-12 is-11-desktop">
+                <div className="layout-1-2-1-2 layout-1-2-2-2 layout-1-2-1-2 layout-1-2-1-1 layout-1-1-1-1"></div>
+                <div className={`project-layout ${layout}`}>
+                  <div className="project-featuredimage">
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: featuredimage,
+                        alt: `Image of project ${title}`
+                      }}
+                    />
+                  </div>
+                  
+
+                <div className="project-content">
+                  <h1 className="project-title">
+                    /{title}
+                  </h1>
+                  
+                  <p className="project-description">
+                    {description}
+                  </p>
+
+                  <div className="project-navigation-top">
+                    <ProjectsNav previous={previousProjectLink} next={nextProjectLink}/>
+                  </div>
+                </div>
+
+                  {
+                    Object.keys(images).map(function(key, index) {
+                      return (
+                        <div className="project-photo" key={index}>
+                          <PreviewCompatibleImage
+                            imageInfo={{
+                              image: images[key],
+                              alt: `Image of project ${title}`
+                            }}
+                          />
+                        </div>
+                      )
+                    })
+                  }
                 </div>
                 
-
-              <div className="project-content">
-                <h1 className="project-title">
-                  /{title}
-                </h1>
-                
-                <p className="project-description">
-                  {description}
-                </p>
-
-                <div className="project-navigation-top">
-                  <ProjectsNav previous={previousProjectLink} next={nextProjectLink}/>
-                </div>
               </div>
-
-                {
-                  Object.keys(images).map(function(key, index) {
-                    return (
-                      <div className="project-photo" key={index}>
-                        <PreviewCompatibleImage
-                          imageInfo={{
-                            image: images[key],
-                            alt: `Image of project ${title}`
-                          }}
-                        />
-                      </div>
-                    )
-                  })
-                }
+              <div className="project-buttons column is-1">
+                <Link className="project-button project-button-back" to="/projects">x</Link>
+                <a className="project-button project-button-up" href="#navbar">up</a>
               </div>
-              
             </div>
-            <div className="project-buttons column is-1">
-              <Link className="project-button project-button-back" to="/projects">x</Link>
-              <a className="project-button project-button-up" href="#navbar">up</a>
+            <div className="columns">
+              <div className="project-navigation-bottom column is-12 is-9-desktop">
+                <ProjectsNav previous={previousProjectLink} next={nextProjectLink}/>
+              </div>
             </div>
           </div>
-          <div className="columns">
-            <div className="project-navigation-bottom column is-9">
-              <ProjectsNav previous={previousProjectLink} next={nextProjectLink}/>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
-    </section>
+    </div>
   )
 }
 

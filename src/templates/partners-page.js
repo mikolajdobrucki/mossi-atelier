@@ -19,13 +19,13 @@ export const PartnersPageTemplate = ({
     <section className="section">
       <div className="container">
         <div className="partners-logos columns is-multiline is-mobile">
-            <article className="column is-6 is-5-desktop">
+            <article className="column is-6-mobile is-5-tablet">
               <PreviewCompatibleImage imageInfo={main.image1} />
             </article>
-            <article className="column is-6 is-5-desktop">
+            <article className="column is-6-mobile is-5-tablet">
               <PreviewCompatibleImage imageInfo={main.image2} />
             </article>
-          <article className="column is-6 is-5-desktop">
+          <article className="column is-6-mobile is-5-tablet">
             <PreviewCompatibleImage imageInfo={main.image3} />
           </article>
         </div>
