@@ -1,17 +1,23 @@
 .vertical-title {
-  font-size: 6rem;
-  position: fixed;
-  width: 100%;
-  z-index: 0;
-  left: 0;
-  bottom: 8rem;
-  h1 {
-    position: absolute;
-    right: 0;
-    width: 0;
-    transform: rotate(-90deg);
-    transform-origin: right bottom;
-    line-height: 4rem;
-    white-space: nowrap;
+  font-size: 4rem;
+  line-height: 1.5;
+  
+  @media (min-width: $tablet) {
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+    left: 0;
+    bottom: 8rem;
+    
+    h1 {
+      font-size: 6rem;
+      position: absolute;
+      right: 0;
+      width: 0;
+      transform: rotate(-90deg);
+      transform-origin: right bottom;
+      line-height: 4rem;
+      white-space: nowrap;
+    }
   }
 }
