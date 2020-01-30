@@ -4,11 +4,12 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <PageTransition>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -49,7 +50,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
-    </div>
+    </PageTransition>
   )
 }
 
