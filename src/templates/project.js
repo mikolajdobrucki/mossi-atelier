@@ -4,23 +4,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-
-export const ProjectsNav = ({
-  previous,
-  next
-}) => {
-  return (
-    <div className="project-navigation">
-      {previous && (
-        <Link className="project-navigation-previous" to={previous.fields.slug}>/{previous.frontmatter.title}</Link>
-      )}
-
-      {next && (
-<Link className="project-navigation-next" to={next.fields.slug}>/{next.frontmatter.title}</Link>
-      )}
-    </div>
-  )
-}
+import ProjectsNav from '../components/ProjectsNav'
 
 export const BlogPostTemplate = ({
   description,

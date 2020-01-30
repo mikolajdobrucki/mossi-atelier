@@ -9,7 +9,7 @@ export const IndexPageTemplate = ({
   <main className="home">
     <img src={
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        } class="home-img" />
+        } className="home-img" />
   </main>
 )
 
