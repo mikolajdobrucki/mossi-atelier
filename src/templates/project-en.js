@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout from '../components/LayoutEn'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import ProjectsNav from '../components/ProjectsNav'
 
-export const BlogPostEnEnTemplate = ({
+export const BlogPostEnTemplate = ({
   description,
   layout,
   title,
@@ -76,7 +76,7 @@ export const BlogPostEnEnTemplate = ({
                 
               </div>
               <div className="project-buttons column is-1">
-                <Link className="project-button project-button-back" to="/projects">x</Link>
+                <Link className="project-button project-button-back" to="/en/projects">x</Link>
                 <a className="project-button project-button-up" href="#navbar">up</a>
               </div>
             </div>
@@ -230,7 +230,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "project" } } }
+      filter: { frontmatter: { templateKey: { eq: "project-en" } } }
     ) {
       edges {
         previous {

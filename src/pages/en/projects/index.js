@@ -1,16 +1,16 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-import BlogRoll from '../../components/BlogRollEn'
+import Layout from '../../../components/LayoutEn'
+import BlogRoll from '../../../components/BlogRoll'
 
-export default class BlogIndexPage extends React.Component {
+export default class BlogIndexEnPage extends React.Component {
   render() {
     return (
       <Layout>
         <div className="vertical-title">
           <div className="section">
             <div className="container">
-              <h1>Projekty</h1>
+              <h1>Projects</h1>
             </div>
           </div>
         </div>

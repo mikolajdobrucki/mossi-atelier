@@ -62,7 +62,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Image, name: image, widget: image}
-       - file: "src/pages/en/index.md"
+      - file: "src/pages/en/index.md"
         label: "English"
         name: "en"
         fields:
