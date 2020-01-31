@@ -32,21 +32,54 @@ collections:
         {label: "Image 2", name: "image_2", widget: image},
         {label: "Image 3", name: "image_3", widget: image},
       ]}
+  - name: "projects-en"
+    label: "Projects"
+    folder: "src/pages/en/projects"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project-en"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Layout", name: "layout", widget: "select", options: ["layout-1-2-2-2","layout-1-2-1-2","layout-1-2-1-1","layout-1-1-1-1"], default: ["layout-1-1-1-1"]}
+      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Images", name: "images", widget: object, fields: [
+        {label: "Image 1", name: "image_1", widget: image},
+        {label: "Image 2", name: "image_2", widget: image},
+        {label: "Image 3", name: "image_3", widget: image},
+      ]}
 
   - name: "pages"
     label: "Pages"
     files:
       - file: "src/pages/index.md"
-        label: "Landing Page"
+        label: "Polski"
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: Image, name: image, widget: image}
+       - file: "src/pages/en/index.md"
+        label: "English"
+        name: "en"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page-en"}
           - {label: Image, name: image, widget: image}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/en/about/index.md"
+        label: "About"
+        name: "about-en"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page-en"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/contact/index.md"
@@ -59,19 +92,45 @@ collections:
           - {label: "Map Zoom", name: "mapZoom", widget: "number"}
           - {label: "Map Latitude", name: "mapLat", widget: "number"}
           - {label: "Map Longitude", name: "mapLng", widget: "number"}
+      - file: "src/pages/en/contact/index.md"
+        label: "Contact"
+        name: "contact-en"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page-en"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Map Zoom", name: "mapZoom", widget: "number"}
+          - {label: "Map Latitude", name: "mapLat", widget: "number"}
+          - {label: "Map Longitude", name: "mapLng", widget: "number"}
       - file: "src/pages/partners/index.md"
-        label: "Partners"
+        label: "Partnerzy"
         name: "partners"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partners-page-en"}
+          - {label: Title, name: title, widget: string}
+          - {label: Main, name: main, widget: object, fields: [
+              {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+              {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+              {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+              {label: Image4, name: image4, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+              {label: Image5, name: image5, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+              {label: Image6, name: image6, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+              {label: Image7, name: image7, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+              {label: Image8, name: image8, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+            ]}
+      - file: "src/pages/en/partners/index.md"
+        label: "Partners"
+        name: "partners-en"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partners-page"}
           - {label: Title, name: title, widget: string}
           - {label: Main, name: main, widget: object, fields: [
               {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
               {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
-              {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}
-              {label: Image4, name: image4, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}
-              {label: Image5, name: image5, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}
-              {label: Image6, name: image6, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}
-              {label: Image7, name: image7, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}
-              {label: Image8, name: image8, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}
+              {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+              {label: Image4, name: image4, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+              {label: Image5, name: image5, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+              {label: Image6, name: image6, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+              {label: Image7, name: image7, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
+              {label: Image8, name: image8, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},
             ]}

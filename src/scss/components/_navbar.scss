@@ -22,7 +22,11 @@
   align-items: flex-end;
 }
 
-a.navbar-item {
+.navbar-item {
+  color: $grey-light;
+}
+
+a.navbar-item, .navbar-item a {
   color: $black;
   img {
     height: 20px;
@@ -38,7 +42,7 @@ a.navbar-item {
     }
   }
   &:hover {
-    color: $grey;
+    color: $grey-light;
   }
 }
 

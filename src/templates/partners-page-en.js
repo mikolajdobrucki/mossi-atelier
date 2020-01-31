@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout from '../components/LayoutEn'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-export const PartnersPageTemplate = ({
+export const PartnersPageEnTemplate = ({
   title,
   main,
 }) => (
@@ -20,14 +20,14 @@ export const PartnersPageTemplate = ({
       <div className="container">
         <div className="columns">
           <div className="column is-8 is-offset-1">
-            <div className="partners-logos columns is-multiline is-mobile">
-                <article className="column is-6-mobile is-4-tablet">
-                  <PreviewCompatibleImage imageInfo={main.image1} />
-                </article>
-                <article className="column is-6-mobile is-4-tablet">
-                  <PreviewCompatibleImage imageInfo={main.image2} />
-                </article>
-              <article className="column is-6-mobile is-4-tablet">
+            <div className="partners-logos">
+              <article>
+                <PreviewCompatibleImage imageInfo={main.image1} />
+              </article>
+              <article>
+                <PreviewCompatibleImage imageInfo={main.image2} />
+              </article>
+              <article>
                 <PreviewCompatibleImage imageInfo={main.image3} />
               </article>
             </div>
@@ -38,16 +38,16 @@ export const PartnersPageTemplate = ({
   </div>
 )
 
-PartnersPageTemplate.propTypes = {
+PartnersPageEnTemplate.propTypes = {
   title: PropTypes.string,
 }
 
-const PartnersPage = ({ data }) => {
+const PartnersPageEn = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
-      <PartnersPageTemplate
+      <PartnersPageEnTemplate
         title={frontmatter.title}
         main={frontmatter.main}
       />
@@ -55,7 +55,7 @@ const PartnersPage = ({ data }) => {
   )
 }
 
-PartnersPage.propTypes = {
+PartnersPageEn.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -63,10 +63,10 @@ PartnersPage.propTypes = {
   }),
 }
 
-export default PartnersPage
+export default PartnersPageEn
 
-export const PartnersPageQuery = graphql`
-  query PartnersPage($id: String!) {
+export const PartnersPageQueryEn = graphql`
+  query PartnersPageEn($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title

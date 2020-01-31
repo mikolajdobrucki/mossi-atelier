@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout from '../components/LayoutEn'
 
-export const IndexPageTemplate = ({
+export const IndexPageTemplateEn = ({
   image,
   title
 }) => (
@@ -21,7 +21,7 @@ export const IndexPageTemplate = ({
   </main>
 )
 
-IndexPageTemplate.propTypes = {
+IndexPageTemplateEn.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
 }
@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate
+      <IndexPageTemplateEn
         image={frontmatter.image}
         title={frontmatter.title}
       />
@@ -50,8 +50,8 @@ IndexPage.propTypes = {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+  query IndexPageTemplateEn {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page-en" } }) {
       frontmatter {
         title
         image {
