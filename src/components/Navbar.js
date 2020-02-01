@@ -32,6 +32,17 @@ const Navbar = class extends React.Component {
   }
 
   render() {
+
+    let url = typeof window !== 'undefined'
+      ? window.location.href
+      : '';
+
+    if(url.includes(".com")) {
+      url = url.split('.com/')[1]
+    } else {
+      url = url.split('http://localhost:8000/')[1]
+    }
+    
     return (
       <nav
         className="navbar is-transparent"
@@ -63,7 +74,7 @@ const Navbar = class extends React.Component {
               <div className="navbar-item">
                   PL
                 <span className="navbar-separator">/</span>
-                <Link to="/en">
+                <Link to={`/en/${url}`}>
                   EN
                 </Link>
               </div>

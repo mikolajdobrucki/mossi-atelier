@@ -1,6 +1,7 @@
 ---
 templateKey: index-page-en
 title: English
+path: /en/projects
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup

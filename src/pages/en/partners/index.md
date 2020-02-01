@@ -1,6 +1,6 @@
 ---
 templateKey: 'partners-page-en'
-path: /partners-en
+path: /en/partners
 title: Partners
 main:
   image1:
