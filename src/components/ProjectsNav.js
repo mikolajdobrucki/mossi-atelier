@@ -7,12 +7,12 @@ const ProjectsNav = ({
 }) => {
   return (
     <div className="project-navigation">
-      {previous && (
-        <Link className="project-navigation-previous" to={previous.fields.slug}>/{previous.frontmatter.title}</Link>
-      )}
-
       {next && (
         <Link className="project-navigation-next" to={next.fields.slug}>/{next.frontmatter.title}</Link>
+      )}
+
+      {previous && (
+        <Link className="project-navigation-previous" to={previous.fields.slug}>/{previous.frontmatter.title}</Link>
       )}
     </div>
   )

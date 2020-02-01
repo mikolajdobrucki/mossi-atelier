@@ -1,3 +1,4 @@
+/* purgecss ignore */
 .project {
   .vertical-title {
     @media (max-width: $tablet) {
@@ -48,11 +49,11 @@
 }
 
 .project-navigation-previous {
-  margin-right: auto;
+  margin-left: auto;
 }
 
 .project-navigation-next {
-  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-navigation-top {
@@ -95,10 +96,13 @@
     margin-left: auto;
   }
 }
-
-.layout-1-2-1-2 .project-photo:nth-child(5),
-.layout-1-2-1-1 .project-photo:nth-child(5 + n),
-.layout-1-2-2-2 .project-photo:nth-child(3 + n)
-{
+/* purgecss start ignore */
+.layout-2-1-1-1-1 .project-photo:nth-child(n+3),
+.layout-2-2-1-1-2 .project-photo:nth-child(5),
+.layout-2-2-1-1-2 .project-photo:nth-child(6),
+.layout-2-2-1-1-2 .project-photo:nth-child(n+9),
+.layout-2-2-1-2-2 .project-photo:nth-child(5),
+.layout-2-1-2-2-2 .project-photo:nth-child(3) {
   grid-column: 1 / span 2;
 }
+/* purgecss end ignore */

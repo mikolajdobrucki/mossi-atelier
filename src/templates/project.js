@@ -32,7 +32,6 @@ export const BlogPostTemplate = ({
           <div className="container">
             <div className="columns">
               <div className="projects-content column is-12 is-11-desktop">
-                <div className="layout-1-2-1-2 layout-1-2-2-2 layout-1-2-1-2 layout-1-2-1-1 layout-1-1-1-1"></div>
                 <div className={`project-layout ${layout}`}>
                   <div className="project-featuredimage">
                     <PreviewCompatibleImage
