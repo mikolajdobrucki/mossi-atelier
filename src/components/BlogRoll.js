@@ -18,12 +18,20 @@ class BlogRoll extends React.Component {
                   <Link
                     to={post.fields.slug}
                   >
-                    <PreviewCompatibleImage
-                      imageInfo={{
-                        image: post.frontmatter.featuredimage,
-                        alt: `featured image thumbnail for project ${post.frontmatter.title}`,
-                      }}
-                    />
+                    <div className="featured-thumbnail-inner">
+                      <div className="featured-thumbnail-image">
+                        <PreviewCompatibleImage
+                          imageInfo={{
+                            image: post.frontmatter.featuredimage,
+                            alt: `featured image thumbnail for project ${post.frontmatter.title}`,
+                          }}
+                        />
+                      </div>
+                      <div className="featured-thumbnail-cover">
+                        <h2>/{post.frontmatter.title}</h2>
+                        <div className="featured-thumbnail-arrow">></div>
+                      </div>
+                    </div>
                   </Link>
                 </div>
               ) : null}
@@ -48,7 +56,7 @@ export default () => (
       query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "project-en" } } }
+          filter: { frontmatter: { templateKey: { eq: "project" } } }
         ) {
           edges {
             previous {

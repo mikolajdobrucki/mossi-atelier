@@ -12,18 +12,47 @@
   }
 }
 
+.featured-thumbnail-cover {
+  opacity: 0;
+  transition: 1s;
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem;
+  text-align: right;
+  color: $black;
+}
+
+
 .projects-item {
   overflow: hidden;
   height: 25rem;
 
   .featured-thumbnail {
+    position: relative;
     height: 100%;
+  }
+  
+  .featured-thumbnail-inner,
+  .featured-thumbnail-image {
+    height: 100%;
+  }
+  
+  .featured-thumbnail-image {
     transition: 1s;
   }
+  
   &:hover {
-    .featured-thumbnail {
+    .featured-thumbnail-cover {
+      opacity: 1;
+    }
+    .featured-thumbnail-image {
       transform: scale(1.1);
-      filter: grayscale(100%);
+      filter: grayscale(100%) brightness(120%);
+      opacity: .7;
     }
   }
 }
