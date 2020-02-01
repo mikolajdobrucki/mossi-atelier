@@ -17,7 +17,7 @@ export const IndexPageTemplateEn = ({
     </div>
     <img src={
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        } className="home-img" />
+        } className="home-img" alt="Mossi Atelier" />
   </main>
 )
 
