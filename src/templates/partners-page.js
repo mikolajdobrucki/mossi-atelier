@@ -10,12 +10,12 @@ export const PartnersPageTemplate = ({
 }) => (
   <div className="partners">
     <div className="vertical-title">
-        <div className="section">
-          <div className="container">
-            <h1>{title}</h1>
-          </div>
+      <div className="section">
+        <div className="container">
+          <h1>{title}</h1>
         </div>
       </div>
+    </div>
     <section className="section">
       <div className="container">
         <div className="columns">
