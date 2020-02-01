@@ -1,12 +1,13 @@
 .projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 25rem;
+  grid-template-rows: 15rem;
   gap: 2rem;
-  padding: 1rem 0;
+  padding: 1rem 0 2rem;
   
   @media (min-width: $tablet) {
-    padding: 0;
+    grid-template-rows: 25rem;
+    padding: 0 0 4rem;
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
   }
@@ -29,7 +30,11 @@
 
 .projects-item {
   overflow: hidden;
-  height: 25rem;
+  height: 15rem;
+
+  @media (min-width: $tablet) {
+    height: 25rem;
+  }
 
   .featured-thumbnail {
     position: relative;

@@ -1,5 +1,9 @@
 .home {
   height: calc(100vh - var(--navbar-height));
+
+  .vertical-title {
+    display: none;
+  }
 }
 
 .home-img {

@@ -1,7 +1,7 @@
 ---
 templateKey: 'partners-page'
 path: /partners
-title: Partners
+title: Partnerzy
 main:
   image1:
     alt: A close-up of a paper filter filled with ground coffee
