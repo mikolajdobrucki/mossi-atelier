@@ -16,6 +16,7 @@ body {
   font-family: $font-sans-serif;
   font-size: 0.88rem;
   line-height: 2;
+  scroll-behavior: smooth;
 }
 
 h1,h2 {
@@ -23,7 +24,7 @@ h1,h2 {
 }
 
 a {
-  transition: 1s color;
+  transition: $animation color;
   &:hover {
     color: $grey; 
   }

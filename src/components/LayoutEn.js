@@ -6,13 +6,13 @@ import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import PageTransition from 'gatsby-plugin-page-transitions';
 
-const TemplateWrapperEn = ({ children }) => {
+const TemplateWrapperEn = ({ pageTitle, children }) => {
   const { title, description } = useSiteMetadata()
   return (
     <PageTransition>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
+        <title>{pageTitle ? `${pageTitle} | ` : ''}{title}</title>
         <meta name="description" content={description} />
 
         <link

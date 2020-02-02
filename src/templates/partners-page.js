@@ -21,15 +21,20 @@ export const PartnersPageTemplate = ({
         <div className="columns">
           <div className="column is-8 is-offset-1">
             <div className="partners-logos columns is-multiline is-mobile">
-                <article className="column is-6-mobile is-4-tablet">
-                  <PreviewCompatibleImage imageInfo={main.image1} />
-                </article>
-                <article className="column is-6-mobile is-4-tablet">
-                  <PreviewCompatibleImage imageInfo={main.image2} />
-                </article>
-              <article className="column is-6-mobile is-4-tablet">
-                <PreviewCompatibleImage imageInfo={main.image3} />
-              </article>
+              {
+                Object.keys(main).map(function(key, index) {
+                  return (
+                    <article className="column is-6-mobile is-4-tablet" key={index}>
+                      <PreviewCompatibleImage
+                        imageInfo={{
+                          image: main[key].image,
+                          alt: `Logo of ${main[key].alt}`
+                        }}
+                      />
+                    </article>
+                  )
+                })
+              }
             </div>
           </div>
         </div>
@@ -46,7 +51,7 @@ const PartnersPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout pageTitle={frontmatter.title}>
       <PartnersPageTemplate
         title={frontmatter.title}
         main={frontmatter.main}
@@ -96,6 +101,56 @@ export const PartnersPageQuery = graphql`
             image {
               childImageSharp {
                 fluid(maxWidth: 1075, quality: 72) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image4 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image5 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image6 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1075, quality: 72) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image7 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image8 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }

@@ -15,7 +15,7 @@
 
 .featured-thumbnail-cover {
   opacity: 0;
-  transition: 1s;
+  transition: $animation;
   font-size: 3rem;
   position: absolute;
   top: 0;
@@ -47,7 +47,7 @@
   }
   
   .featured-thumbnail-image {
-    transition: 1s;
+    transition: $animation;
   }
   
   &:hover {

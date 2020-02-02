@@ -1,8 +1,10 @@
 .home {
   height: calc(100vh - var(--navbar-height));
 
-  .vertical-title {
-    display: none;
+  @media (max-width: $tablet) {
+    .vertical-title {
+      display: none;
+    }
   }
 }
 

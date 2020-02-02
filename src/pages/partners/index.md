@@ -4,11 +4,26 @@ path: /partners
 title: Partnerzy
 main:
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
+    alt: Partner
     image: /img/logo.png
   image2:
-    alt: A green cup of a coffee on a wooden table
+    alt: Partner
     image: /img/logo.png
   image3:
-    alt: Coffee beans
+    alt: Partner
+    image: /img/logo.png
+  image4:
+    alt: Partner
+    image: /img/logo.png
+  image5:
+    alt: Partner
+    image: /img/logo.png
+  image6:
+    alt: Partner
+    image: /img/logo.png
+  image7:
+    alt: Partner
+    image: /img/logo.png
+  image8:
+    alt: Partner
     image: /img/logo.png

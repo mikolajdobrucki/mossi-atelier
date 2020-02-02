@@ -37,7 +37,7 @@ export const BlogPostTemplate = ({
                     <PreviewCompatibleImage
                       imageInfo={{
                         image: featuredimage,
-                        alt: `Image of project ${title}`
+                        alt: `Image of project ${title} by Mossi Atelier`
                       }}
                     />
                   </div>
@@ -120,7 +120,7 @@ const BlogPost = ({ data }) => {
         description={post.frontmatter.description}
         images={post.frontmatter.images}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Projekty | Mossi Atelier">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
