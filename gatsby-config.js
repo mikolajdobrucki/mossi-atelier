@@ -73,6 +73,14 @@ module.exports = {
       },
     }, // must be after other CSS plugins
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: `${__dirname}/src/svg/`
+        }
+      }
+    },
+    {
       resolve: 'gatsby-plugin-page-transitions',
       options: {
         transitionTime: 1000

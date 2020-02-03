@@ -16,7 +16,7 @@
 .featured-thumbnail-cover {
   opacity: 0;
   transition: $animation;
-  font-size: 3rem;
+  font-size: 4rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -48,6 +48,18 @@
   
   .featured-thumbnail-image {
     transition: $animation;
+  }
+
+  .featured-thumbnail-cover {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .featured-thumbnail-arrow {
+    width: 2rem;
+    height: auto;
+    margin-top: -3rem;
   }
   
   &:hover {

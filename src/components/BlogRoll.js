@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import ArrowIcon from "../svg/right.svg"
 
 class BlogRoll extends React.Component {
   render() {
@@ -29,7 +30,9 @@ class BlogRoll extends React.Component {
                       </div>
                       <div className="featured-thumbnail-cover">
                         <h2>/{post.frontmatter.title}</h2>
-                        <div className="featured-thumbnail-arrow">></div>
+                        <div className="featured-thumbnail-arrow">
+                          <ArrowIcon />
+                        </div>
                       </div>
                     </div>
                   </Link>
