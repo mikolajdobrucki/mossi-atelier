@@ -5,6 +5,8 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import ProjectsNav from '../components/ProjectsNav'
+import CloseIcon from "../svg/x.svg"
+import TopIcon from "../svg/top.svg"
 
 export const BlogPostTemplate = ({
   description,
@@ -75,12 +77,16 @@ export const BlogPostTemplate = ({
                 
               </div>
               <div className="project-buttons column is-1">
-                <Link className="project-button project-button-back" to="/projects">x</Link>
-                <a className="project-button project-button-up" href="#navbar">up</a>
+                <Link className="project-button project-button-back" to="/projects">
+                  <CloseIcon />
+                </Link>
+                <a className="project-button project-button-up" href="#navbar">
+                  <TopIcon />
+                </a>
               </div>
             </div>
             <div className="columns">
-              <div className="project-navigation-bottom column is-12 is-9-desktop">
+              <div className="project-navigation-bottom column is-9-tablet">
                 <ProjectsNav previous={previousProjectLink} next={nextProjectLink}/>
               </div>
             </div>

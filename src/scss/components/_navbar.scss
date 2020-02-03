@@ -22,12 +22,13 @@
   align-items: flex-end;
 }
 
-.navbar-item {
-  color: $grey-light;
+.navbar-item-inactive {
+  opacity: $active-opacity;
 }
 
 a.navbar-item, .navbar-item a {
   color: $black;
+  opacity: 1;
   img {
     height: 20px;
     max-height: 20px;
@@ -42,7 +43,7 @@ a.navbar-item, .navbar-item a {
     }
   }
   &:hover {
-    color: $grey-light;
+    opacity: $active-opacity;
   }
 }
 

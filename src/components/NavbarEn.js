@@ -71,8 +71,10 @@ const NavbarEn = class extends React.Component {
                 <Link to={`/${url}`}>
                   PL
                 </Link>
-                <span className="navbar-separator">/</span>
-                  EN
+                <span className="navbar-item-inactive">
+                  <span className="navbar-separator">/</span>
+                    EN
+                </span>
               </div>
             </div>
             <div className="navbar-start has-text-centered">

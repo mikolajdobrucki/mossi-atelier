@@ -24,9 +24,10 @@ h1,h2 {
 }
 
 a {
-  transition: $animation color;
+  transition: $animation opacity;
   &:hover {
-    color: $grey; 
+    color: $black; 
+    opacity: $active-opacity;
   }
 }
 

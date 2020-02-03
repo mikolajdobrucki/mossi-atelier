@@ -46,14 +46,47 @@
   display: flex;
   font-family: $font-serif;
   font-size: 2rem;
+  white-space: nowrap;
+  transition: $animation;
+  
+  svg {
+    transition: $animation;
+    fill: $black;
+    width: 1.2rem;
+  }
+
+}
+
+.project-navigation-previous,
+.project-navigation-next {
+  transition: $animation;
+  display: flex;
 }
 
 .project-navigation-previous {
   margin-left: auto;
+  svg {
+    margin-left: 1rem;
+  }
+  &:hover {
+    transform: translateX(.5rem);
+    svg {
+      transform: translateX(.2rem);
+    }
+  }
 }
 
 .project-navigation-next {
   margin-right: auto;
+  svg {
+    margin-right: 1rem;
+  }
+  &:hover {
+    transform: translateX(-.5rem);
+    svg {
+      transform: translateX(-.2rem);
+    }
+  }
 }
 
 .project-navigation-top {
@@ -79,8 +112,15 @@
   line-height: 3rem;
   text-align: center;
   border-radius: 50%;
-  display: block;
   border: 1px solid $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: $animation;
+  svg {
+    transition: $animation;
+    width: 1rem;
+  }
 }
 
 .project-button-back {
@@ -89,11 +129,25 @@
     top: 3rem;
     right: 0;
   }
+  &:hover {
+    transform: scale(0.9);
+
+    svg {
+      transform: scale(1.2);
+    }
+  }
 }
 
 .project-button-up {
   @media (max-width: $tablet) {
     margin-left: auto;
+  }
+  &:hover {
+    transform: scale(0.8);
+
+    svg {
+      transform: scale(1.2) translateY(-2.5rem);
+    }
   }
 }
 /* purgecss start ignore */
