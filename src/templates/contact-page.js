@@ -31,7 +31,7 @@ export const ContactPageTemplate = ({ title, mapZoom, mapLng, mapLat, content, c
                   zoom={mapZoom}
                   options={mapOptions}
                   bootstrapURLKeys={{
-                    key: "AIzaSyCGidjP2EjD3tGLPBSp7KsHdcaoK3lI_Kc"
+                    key: "AIzaSyAQMjQPe_S9MuJRPZtqhMaPpgV9pTkv_nY"
                   }}
                 ></GoogleMap>
               </div>
