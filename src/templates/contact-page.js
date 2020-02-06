@@ -37,7 +37,10 @@ export const ContactPageTemplate = ({ title, mapZoom, mapLng, mapLat, content, c
               </div>
             </div>
             <div className="column is-10 is-offset-1">
-              <PageContent className="content" content={content} />
+              <div className="content">
+                <em></em>
+                <PageContent  content={content} />
+              </div>
               <div className="contact-socials">
                 <a href="http://www.instagram.com/mossi.atelier/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 / 
