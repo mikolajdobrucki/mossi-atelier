@@ -27,8 +27,8 @@ export const PartnersPageTemplate = ({
                     <article className="column is-6-mobile is-4-tablet" key={index}>
                       <PreviewCompatibleImage
                         imageInfo={{
-                          image: main[key].image,
-                          alt: `Logo of ${main[key].alt}`
+                          image: main[key],
+                          alt: 'Logo of our partner'
                         }}
                       />
                     </article>
@@ -76,83 +76,171 @@ export const PartnersPageQuery = graphql`
       frontmatter {
         title
         main {
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
+          image__1 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 90) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
+          image__2 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
+          image__3 {
+            childImageSharp {
+              fluid(maxWidth: 1075, quality: 72) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
-          image4 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
+          image__4 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
-          image5 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
+          image__5 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
-          image6 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
+          image__6 {
+            childImageSharp {
+              fluid(maxWidth: 1075, quality: 72) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
-          image7 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
+          image__7 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
-          image8 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
+          image__8 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__7 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__8 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__9 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__10 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__11 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__12 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__13 {
+            childImageSharp {
+              fluid(maxWidth: 1075, quality: 72) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__14 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__15 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__16 {
+            childImageSharp {
+              fluid(maxWidth: 1075, quality: 72) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__17 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__18 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__17 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__18 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__19 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image__20 {
+            childImageSharp {
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
