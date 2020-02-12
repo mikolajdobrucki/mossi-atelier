@@ -24,14 +24,17 @@ export const PartnersPageEnTemplate = ({
               {
                 Object.keys(main).map(function(key, index) {
                   return (
+                    main[key] ?
                     <article className="column is-6-mobile is-4-tablet" key={index}>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: main[key],
-                          alt: 'Logo naszego partnera'
+                          alt: 'Logo of our partner'
                         }}
                       />
                     </article>
+                    :
+                    ""
                   )
                 })
               }

@@ -1,7 +1,7 @@
 ---
-templateKey: partners-page
-path: /partners
-title: Partnerzy
+templateKey: 'partners-page-en'
+path: /en/partners/dummy
+title: Partners
 main:
   image__1: /img/partner1.jpg
   image__2: /img/partner2.jpg
@@ -18,5 +18,9 @@ main:
   image__13: /img/partner13.jpg
   image__14: /img/partner14.png
   image__15: /img/partner15.jpg
+  image__16: /img/logo.png
+  image__17: /img/logo.png
+  image__18: /img/logo.png
+  image__19: /img/logo.png
+  image__20: /img/logo.png
 ---
-

@@ -110,7 +110,7 @@ collections:
         label: "Partnerzy (PL)"
         name: "partners"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partners-page-en"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partners-page"}
           - {label: Title, name: title, widget: string}
           - {label: Main, name: main, widget: object, fields: [
               {label: "Image 1", name: "image__1", widget: image, required: false},
@@ -138,27 +138,27 @@ collections:
         label: "Partners (EN)"
         name: "partners-en"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partners-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partners-page-en"}
           - {label: Title, name: title, widget: string}
           - {label: Main, name: main, widget: object, fields: [
-              {label: "Image 1", name: "image__1", widget: image, required: false},
-              {label: "Image 2", name: "image__2", widget: image, required: false},
-              {label: "Image 3", name: "image__3", widget: image, required: false},
-              {label: "Image 4", name: "image__4", widget: image, required: false},
-              {label: "Image 5", name: "image__5", widget: image, required: false},
-              {label: "Image 6", name: "image__6", widget: image, required: false},
-              {label: "Image 7", name: "image__7", widget: image, required: false},
-              {label: "Image 8", name: "image__8", widget: image, required: false},
-              {label: "Image 9", name: "image__9", widget: image, required: false},
-              {label: "Image 10", name: "image__10", widget: image, required: false},
-              {label: "Image 11", name: "image__11", widget: image, required: false},
-              {label: "Image 12", name: "image__12", widget: image, required: false},
-              {label: "Image 13", name: "image__13", widget: image, required: false},
-              {label: "Image 14", name: "image__14", widget: image, required: false},
-              {label: "Image 15", name: "image__15", widget: image, required: false},
-              {label: "Image 16", name: "image__16", widget: image, required: false},
-              {label: "Image 17", name: "image__17", widget: image, required: false},
-              {label: "Image 18", name: "image__18", widget: image, required: false},
-              {label: "Image 19", name: "image__19", widget: image, required: false},
-              {label: "Image 20", name: "image__20", widget: image, required: false},
+              {label: "Image 1", name: "image___1", widget: image, required: false},
+              {label: "Image 2", name: "image___2", widget: image, required: false},
+              {label: "Image 3", name: "image___3", widget: image, required: false},
+              {label: "Image 4", name: "image___4", widget: image, required: false},
+              {label: "Image 5", name: "image___5", widget: image, required: false},
+              {label: "Image 6", name: "image___6", widget: image, required: false},
+              {label: "Image 7", name: "image___7", widget: image, required: false},
+              {label: "Image 8", name: "image___8", widget: image, required: false},
+              {label: "Image 9", name: "image___9", widget: image, required: false},
+              {label: "Image 10", name: "image___10", widget: image, required: false},
+              {label: "Image 11", name: "image___11", widget: image, required: false},
+              {label: "Image 12", name: "image___12", widget: image, required: false},
+              {label: "Image 13", name: "image___13", widget: image, required: false},
+              {label: "Image 14", name: "image___14", widget: image, required: false},
+              {label: "Image 15", name: "image___15", widget: image, required: false},
+              {label: "Image 16", name: "image___16", widget: image, required: false},
+              {label: "Image 17", name: "image___17", widget: image, required: false},
+              {label: "Image 18", name: "image___18", widget: image, required: false},
+              {label: "Image 19", name: "image___19", widget: image, required: false},
+              {label: "Image 20", name: "image___20", widget: image, required: false},
             ]}

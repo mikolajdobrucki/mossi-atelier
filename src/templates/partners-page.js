@@ -24,6 +24,7 @@ export const PartnersPageTemplate = ({
               {
                 Object.keys(main).map(function(key, index) {
                   return (
+                    main[key] ?
                     <article className="column is-6-mobile is-4-tablet" key={index}>
                       <PreviewCompatibleImage
                         imageInfo={{
@@ -32,6 +33,8 @@ export const PartnersPageTemplate = ({
                         }}
                       />
                     </article>
+                    :
+                    ""
                   )
                 })
               }
