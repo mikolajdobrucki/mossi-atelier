@@ -2,8 +2,11 @@
   align-items: center;
   mix-blend-mode: multiply;
   filter: grayscale(1);
+  .column {
+    margin-bottom: 4rem;
+  }
 }
 .partners-footnote {
   text-align: center;
-  margin: 4rem 0;
+  margin: 0 0 4rem;
 }
