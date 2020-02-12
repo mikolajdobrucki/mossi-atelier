@@ -25,7 +25,7 @@ export const PartnersPageTemplate = ({
                 Object.keys(main).map(function(key, index) {
                   return (
                     main[key] ?
-                    <article className="column is-6-mobile is-4-tablet" key={index}>
+                    <article className="column is-6 is-offset-3" key={index}>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: main[key],
@@ -38,6 +38,9 @@ export const PartnersPageTemplate = ({
                   )
                 })
               }
+            </div>
+            <div className="partners-footnote">
+              i inni
             </div>
           </div>
         </div>
@@ -81,168 +84,168 @@ export const PartnersPageQuery = graphql`
         main {
           image__1 {
             childImageSharp {
-              fluid(maxWidth: 800, quality: 90) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__2 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__3 {
             childImageSharp {
-              fluid(maxWidth: 1075, quality: 72) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__4 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__5 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__6 {
             childImageSharp {
-              fluid(maxWidth: 1075, quality: 72) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__7 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__8 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__7 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__8 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__9 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__10 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__11 {
             childImageSharp {
-              fluid(maxWidth: 800, quality: 90) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__12 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__13 {
             childImageSharp {
-              fluid(maxWidth: 1075, quality: 72) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__14 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__15 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__16 {
             childImageSharp {
-              fluid(maxWidth: 1075, quality: 72) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__17 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__18 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__17 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__18 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__19 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           image__20 {
             childImageSharp {
-              fluid(maxWidth: 526, quality: 92) {
+              fluid(maxWidth: 250, quality: 92) {
                 ...GatsbyImageSharpFluid
               }
             }
