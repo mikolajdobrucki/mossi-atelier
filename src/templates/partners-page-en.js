@@ -27,8 +27,8 @@ export const PartnersPageEnTemplate = ({
                     <article className="column is-6-mobile is-4-tablet" key={index}>
                       <PreviewCompatibleImage
                         imageInfo={{
-                          image: main[key].image,
-                          alt: `Logo of ${main[key].alt}`
+                          image: main[key],
+                          alt: 'Logo naszego partnera'
                         }}
                       />
                     </article>
