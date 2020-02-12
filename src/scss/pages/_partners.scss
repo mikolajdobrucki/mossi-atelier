@@ -1,3 +1,10 @@
+.partners {
+  @media (max-width: $tablet) {
+    .vertical-title {
+      margin-bottom: 4rem;
+    }
+  }
+}
 .partners-logos {
   align-items: center;
   mix-blend-mode: multiply;
