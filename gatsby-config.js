@@ -2,7 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'Mossi Atelier',
     description:
-      'Studio projektowania architektury wnętrz i wykonywania hiperrealistycznych wizualizacji.',
+      'Mossi Atelier - interdyscyplinarne studio projektowe, zajmująca się architekturą wnętrz, projektowaniem mebli oraz wykonywaniem hiperrealistycznych  wizualizacji. Mossi specjalizuje się w projektowaniu wnętrz prywatnych.',
+    descriptionEn:
+      'Mossi Atelier - an interdisciplinary design studio specializes in interior architecture, furniture design and creating hyperrealistic CG visualizations. Mossi specializes exclusively in designing residential  interiors. Creating beautiful spaces to cherish life.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

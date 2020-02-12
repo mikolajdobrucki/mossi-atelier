@@ -7,13 +7,13 @@ import { withPrefix } from 'gatsby'
 import PageTransition from 'gatsby-plugin-page-transitions';
 
 const TemplateWrapperEn = ({ pageTitle, children }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, descriptionEn } = useSiteMetadata()
   return (
     <PageTransition>
       <Helmet>
         <html lang="en" />
         <title>{pageTitle ? `${pageTitle} | ` : ''}{title}</title>
-        <meta name="description" content={description} />
+        <meta name="description" content={descriptionEn} />
 
         <link
           rel="apple-touch-icon"
