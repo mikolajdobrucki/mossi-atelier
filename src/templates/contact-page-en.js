@@ -47,6 +47,8 @@ export const ContactPageEnTemplate = ({ title, mapZoom, mapLng, mapLat, content,
                 <a href="http://facebook.com/mossi.atelier" target="_blank" rel="noopener noreferrer">Facebook</a>
                 / 
                 <a href="https://pinterest.com/mossiatelier/" target="_blank" rel="noopener noreferrer">Pinterest</a>
+                / 
+                <a href="http://www.linkedin.com/company/mossi-atelier" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </div>
             </div>
           </div>
