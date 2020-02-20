@@ -11,9 +11,9 @@
   margin-left: -33.3%;
   padding-bottom: 0;
   display: none;
-  @media (min-width: $tablet) {
-    display: block;
-  }
+  // @media (min-width: $tablet) {
+  //   display: block;
+  // }
 }
 .contact-map-content {
   min-height: calc(100vh - var(--navbar-height));
